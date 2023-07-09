@@ -1,0 +1,26 @@
+{
+    "manifest_version": 3,
+    "name": "autofill-your-life",
+    "description": "automatically fill rectangles on your life page",
+    "version": "1.0",
+    "permissions": [
+        "activeTab",
+        "scripting"
+    ],
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "http://some1else.github.io/life/",
+                "https://some1else.github.io/life/"
+            ],
+            "js": [
+                "content.js"
+            ],
+            "run_at": "document_end"
+        }
+    ]
+}
+
